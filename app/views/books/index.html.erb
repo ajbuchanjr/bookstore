@@ -2,6 +2,6 @@
 <p>Available at <%= formatted_time(@available_at) %></p>
 <ol>
   <% @books.each do |book| %>
-  <li><b><%= book %></b></li>
+  <li><i><%= link_to(book.title, book) %></i> by <%= book.author %></li></br>
   <% end %>
 </ol>

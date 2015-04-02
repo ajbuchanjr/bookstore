@@ -1,6 +1,9 @@
 class BooksController < ApplicationController
   def index
     @available_at = Time.now
-    @books = ["Book1","Book2","Book3"]
+    @books = Book.all
+  end
+  def show
+    @book = Book.find(params[:id])
   end
 end
