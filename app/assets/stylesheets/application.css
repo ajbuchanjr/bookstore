@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ .delbtn
+ {
+  color: white;
+  background-color: red;
+  font-size: 14px;
+  font-style: bold;
+ };
