@@ -4,7 +4,8 @@ class BookTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-  def setup
+
+def setup
   @book = Book.new
 end
 
@@ -32,7 +33,7 @@ test 'persistence works properly' do
   assert_equal 440, found_book.pages
 end
 
-test "update from a fixture" do
+test 'update from a fixture' do
   book = books(:ender)
   delta = 0.001
   assert_in_delta 4.83, book.price, delta
