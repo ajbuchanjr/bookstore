@@ -1,8 +1,8 @@
-<h1>Enter a New Book</h1>
+<h1>Editing <%= @book.title %></h1>
 <%= form_for(@book) do |f| %>
   <%= f.label :title %> <%= f.text_field :title, autofocus: true %><br />
   <%= f.label :author %> <%= f.text_field :author %><br />
   <%= f.label :pages %> <%= f.text_field :pages %><br />
-  <%= f.label :price %> <%= f.text_field :price %>
-  <p><%= f.submit %></br></br><%= link_to 'Back', :back %></p>
+  <%= f.label :price %> <%= f.text_field :price %><br />
+  <p><%= f.submit %> <%= f.submit "Reset", :type => "reset"%> </br></br><%= link_to 'Back', :back %></p>
 <% end %>
