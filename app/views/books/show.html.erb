@@ -8,3 +8,7 @@
 </article>
 
 <%= link_to 'Back to All Books', books_path %> | <%= link_to 'Edit', edit_book_path(@book) %>
+</br></br>
+<%= button_to 'Delete', @book,
+               method: :delete,
+               data: { confirm: 'Delete this book?' } %>
