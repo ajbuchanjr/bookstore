@@ -31,6 +31,7 @@ test 'persistence works properly' do
   assert_equal 'Snow Crash', found_book.title
   assert_equal 'Neal Stephenson', found_book.author
   assert_equal 440, found_book.pages
+  assert_in_delta 12.99, found_book.price, 0.001
 end
 
 test 'update from a fixture' do
