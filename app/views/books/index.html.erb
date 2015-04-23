@@ -3,7 +3,14 @@
 <%= page_entries_info @books %>
 <ol>
 <% @books.each do |book| %>
-  <li><%= link_to(book.title, book) %> by <%= book.author %></li>
+  <li>
+  <%= link_to(book.title, book) %>
+  by <%= book.author %> =>
+  <%= format_average_stars(book) %>
+  <% if book.reviews.any? %>
+    (from <%= pluralize(book.reviews.size, 'review') %>)
+  <% end %>
+</li>
 <% end %>
 </ol>
 <%= paginate @books %>

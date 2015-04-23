@@ -4,7 +4,7 @@ before_action :set_book, only: [ :show, :edit, :update, :destroy ]
 
 def index
   @available_at = Time.now
-  @books = Book.order(:title).page(params[:page])
+  @books = Book.includes(:reviews).order(:title).page(params[:page])
 end
 
 def show
